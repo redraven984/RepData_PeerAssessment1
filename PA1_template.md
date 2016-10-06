@@ -225,7 +225,7 @@ activity$dayOfWeek<-daysOfWeek
 Finally we want to average the data frame to obtain the average user step profile for a weekend and for a weekday.
 
 ```r
-totalStepsDayType<-aggregate(activity$steps,list(activity$dayOfWeek,activity$interval),FUN=sum,na.rm=TRUE)
+totalStepsDayType<-aggregate(activity$steps,list(activity$dayOfWeek,activity$interval),FUN=mean,na.rm=TRUE)
 ```
 
 Finally, we make a lattice plot to display the results of the averaged activity across the type of day. We note from the plots that the user is significantly less active on the weekends and in particular on the weekend mornings.
